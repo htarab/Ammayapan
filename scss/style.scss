@@ -58,6 +58,16 @@ nav ul li a{
     font-size: 17px;
     color: var(--text_color);
     font-family: 'Poppins', sans-serif;
+    transition: 1s;
+}
+
+.selected_tab{
+    text-decoration: underline;
+    text-decoration-color: var(primary_color);
+    text-decoration-thickness: 1.5px;
+    font-weight: bold;
+    text-underline-offset: 10px;
+    transform: translateY(-5px);
 }
 
 .banner{
