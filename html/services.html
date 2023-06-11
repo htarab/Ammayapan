@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="..\css\style.css">
     <link rel="stylesheet" href="..\css\service_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="container">
@@ -37,20 +40,55 @@
             </div>
         </div>
 
-        <div class="bottom_half">
-            <div class="card">
-                <div class="card_content">
+        <div class="swiper bottom_half">
+            <div class="swiper-wrapper card">
+                <div class="swiper-slide card_content">
                     <img class="card_image" src="../resources//images/Annadhanam.jpg" alt="">
                 </div>
-                <div class="card_content">
+                <div class="swiper-slide card_content">
                     <img class="card_image" src="../resources//images/Annadhanam.jpg" alt="">
                 </div>
-                <div class="card_content">
+                <div class="swiper-slide card_content">
+                    <img class="card_image" src="../resources//images/Annadhanam.jpg" alt="">
+                </div>
+                <div class="swiper-slide card_content">
+                    <img class="card_image" src="../resources//images/Annadhanam.jpg" alt="">
+                </div>
+                <div class="swiper-slide card_content">
                     <img class="card_image" src="../resources//images/Annadhanam.jpg" alt="">
                 </div>
             </div>
         </div>
-
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 4,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+  </script>
+
 </body>
 </html>
