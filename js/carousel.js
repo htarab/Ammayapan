@@ -11,7 +11,7 @@ function currentSlide(n) {
 
 function SlideShow(n) {
 	var i;
-	console.log("hi");
+	//console.log("hi");
 	var slides = document.getElementsByClassName("banner-container");
 	var circles = document.querySelectorAll(".slide-content");
 	console.log(circles);
