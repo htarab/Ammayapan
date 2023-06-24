@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="..\css/donate_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/border-all.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
@@ -24,34 +26,49 @@
                 </ul>
             </nav>
         </div>
-
-        <!-- <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="../resources//images/Annadhanam.jpg" alt="Avatar" style="width:300px;height:300px;">
-              </div>
-              <div class="flip-card-back">
-                <h1>John Doe</h1> 
-                <p>Architect & Engineer</p> 
-                <p>We love that guy</p>
-              </div>
-            </div>
-        </div> -->
-
-        <div class="scene scene--card">
-            <div class="card">
-              <div class="card__face card__face--front">
-                <div class="front_content">
-                    <h1 class="title">donate</h1>
-                    <div class="mode">
-                        <button id="oneTime" class="button button1 selected" onclick="change_selected(0)">one timer</button>
-                        <button id="monthly" class="button button2" onclick="change_selected(1)">monthly</button>
+        <div class="scene_container">
+            <div class="scene scene--card">
+                <div class="card">
+                <div class="card__face card__face--front">
+                    <div class="front_content">
+                        <h1 class="title">donate</h1>
+                        <div class="mode">
+                            <button id="oneTime" class="button button1 selected btn_mode" onclick="change_mode_selected(0)">one timer</button>
+                            <button id="monthly" class="button button2 not_selected btn_mode" onclick="change_mode_selected(1)">monthly</button>
+                        </div>
+                        <div class="amount">
+                            <button class="button btn_amount" onclick="amt_select(0)">100</button>
+                            <button class="button amt_button btn_amount" onclick="amt_select(1)">500</button>
+                            <button class="button btn_amount" onclick="amt_select(2)">1000</button>
+                        </div>
+                        <div>
+                            <div id="formId" class="enter_amount" action="">
+                                <div class="icon_rupee_container"><h3 class="icon_rupee">₹</h3></div>
+                                <input class="amt" type="number" placeholder="Preferred Amount">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <form id="formId" class="btn_donate" action="">
+                                <button class="btn_donate1">
+                                    donate
+                                </button>
+                            </form>
+                            <div class="btn_details">
+                                <button class="btn_details1" onclick="turn_card()">
+                                    details
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-              <div class="card__face card__face--back">back</div>
+                <div class="card__face card__face--back">
+                    <div class="back_content">
+                        <h1 class="title">details</h1>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
+        </div>
 
 
     </div>

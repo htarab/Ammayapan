@@ -1,14 +1,18 @@
-// var cards = document.querySelectorAll('.card');
-
-// [...cards].forEach((card)=>{
-//   card.addEventListener( 'click', function() {
-//     card.classList.toggle('is-flipped');
-//   });
-// });
-
-function change_selected(n = 0)
+function turn_card(event)
 {
-  button = document.getElementsByClassName("button");
+  var cards = document.querySelectorAll('.card');
+
+  [...cards].forEach((card)=>{
+    
+      card.classList.toggle('is-flipped');
+    
+  });
+  event.preventDefault();
+}
+
+function change_mode_selected(n)
+{
+  button = document.getElementsByClassName("btn_mode");
   button[n].classList.add("selected");
   button[n].classList.remove("not_selected");
   
@@ -24,6 +28,20 @@ function change_selected(n = 0)
   button[n].classList.remove("not_selected");
 }
 
+function amt_select(n)
+{
+  button = document.getElementsByClassName("btn_amount");
+
+  for (i = 0; i < 3; i++) {
+    if(i != n)
+    {
+      button[i].classList.remove("amt_selected");
+    }
+	}
+
+  button[n].classList.add("amt_selected");
+}
+
 (() => {
-	change_selected();
+	change_mode_selected(0);
 })();
