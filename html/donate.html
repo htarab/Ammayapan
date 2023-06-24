@@ -25,7 +25,7 @@
             </nav>
         </div>
 
-        <div class="flip-card">
+        <!-- <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img src="../resources//images/Annadhanam.jpg" alt="Avatar" style="width:300px;height:300px;">
@@ -36,9 +36,25 @@
                 <p>We love that guy</p>
               </div>
             </div>
-        </div>
+        </div> -->
+
+        <div class="scene scene--card">
+            <div class="card">
+              <div class="card__face card__face--front">
+                <div class="front_content">
+                    <h1 class="title">donate</h1>
+                    <div class="mode">
+                        <button id="oneTime" class="button button1 selected" onclick="change_selected(0)">one timer</button>
+                        <button id="monthly" class="button button2" onclick="change_selected(1)">monthly</button>
+                    </div>
+                </div>
+              </div>
+              <div class="card__face card__face--back">back</div>
+            </div>
+          </div>
 
 
     </div>
+    <script src="../js/card_turn.js"></script>
 </body>
 </html>
