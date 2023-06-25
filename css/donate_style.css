@@ -334,3 +334,42 @@ input[type=number]{
 .btn_donate1:hover{
     color: white;
 }
+
+ul {
+    list-style-type: none;
+  }
+
+.field{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.content{
+    font-weight: bold;
+}
+
+.btn_back{
+    height: 43px;
+    width: 45%;
+    background-color: var(--button_color);
+    color: aliceblue;
+    border-radius: 7px;
+    align-self: center;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.btn_back1{
+    height: 43px;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+}
